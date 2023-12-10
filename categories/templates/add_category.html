@@ -1,0 +1,12 @@
+{% extends 'base.html'%}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<form style="width: 50%; height: 70%; background-color: rgb(158, 61, 61); margin: auto; padding: 10px; color: rgb(21, 40, 84); border-radius: 5px;" class="mt-3" method="post">
+    <h1> add Category page </h1>
+    {% csrf_token %}
+    {{form | crispy}}
+    <button type="submit" class="btn btn-warning">submit</button>
+</form>
+
+{% endblock %}
